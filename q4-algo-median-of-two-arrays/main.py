@@ -42,7 +42,9 @@ def main() -> None:
     median = 0.0
     counter = 0
     denominator = 2.0 if num_elems % 2 == 0 else 1.0
-    latest_elem = -1 * float("inf")  # To be used for checking if the input arrays are sorted
+    latest_elem = -1 * float(
+        "inf"
+    )  # To be used for checking if the input arrays are sorted
 
     while input1 or input2:  # While any of the input arrays are not empty
         # Get the current element from the input arrays
@@ -54,10 +56,12 @@ def main() -> None:
             current_elem = input1.popleft()
         else:
             current_elem = input2.popleft()
-        
+
         # Check if the input arrays are sorted
         if latest_elem > current_elem:
-            raise ValueError("The input arrays are not sorted. Please check your input.")
+            raise ValueError(
+                "The input arrays are not sorted. Please check your input."
+            )
         latest_elem = current_elem
 
         # Add the current element to the merged array
